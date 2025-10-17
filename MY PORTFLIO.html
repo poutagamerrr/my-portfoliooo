@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <meta name="description" content="Welcome to my portfolio - Explore my projects and work">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background: hsl(220, 25%, 97%);
+            --foreground: hsl(220, 15%, 15%);
+            --primary: hsl(250, 85%, 60%);
+            --accent: hsl(280, 75%, 65%);
+            --muted-foreground: hsl(220, 10%, 45%);
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(180deg, hsl(220, 25%, 97%) 0%, hsl(220, 20%, 95%) 100%);
+            color: var(--foreground);
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .hero-content {
+            max-width: 56rem;
+            margin: 0 auto;
+            text-align: center;
+            animation: fade-in 0.8s ease-out forwards;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            color: var(--muted-foreground);
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 40px -10px hsl(250, 85%, 60%, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 60px hsl(250, 85%, 60%, 0.15);
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: hsl(220, 25%, 8%);
+                --foreground: hsl(220, 15%, 95%);
+                --primary: hsl(250, 85%, 65%);
+                --accent: hsl(280, 75%, 70%);
+                --muted-foreground: hsl(220, 10%, 60%);
+            }
+
+            body {
+                background: linear-gradient(180deg, hsl(220, 25%, 8%) 0%, hsl(220, 20%, 10%) 100%);
+            }
+
+            .cta-button {
+                box-shadow: 0 10px 40px -10px hsl(250, 85%, 65%, 0.3);
+            }
+
+            .cta-button:hover {
+                box-shadow: 0 0 60px hsl(250, 85%, 65%, 0.2);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="backgroundimage.jpg" alt="background image" style="display:none;">
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Omar Ben Maaouia</h1>
+                <p class="subtitle">Creative Developer & Designer</p>
+                <a href="#projects" class="cta-button">View My Projects</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
